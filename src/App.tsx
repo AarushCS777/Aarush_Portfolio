@@ -1,6 +1,4 @@
 import React from 'react';
-import { PhotoProvider } from './context/PhotoContext';
-import { OwnerPhotoModal } from './components/OwnerPhotoModal';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -12,27 +10,22 @@ import { Footer } from './components/Footer';
 
 export default function App() {
   return (
-    <PhotoProvider>
-      <div className="min-h-screen bg-[#0a0a0f] text-[#e8e8f0] relative selection:bg-[#7c6ef7]/30 selection:text-white">
-        {/* Fixed Navigation */}
-        <Navbar />
+    <div className="min-h-screen bg-[#0a0a0f] text-[#e8e8f0] relative selection:bg-[#7c6ef7]/30 selection:text-white">
+      {/* Fixed Navigation */}
+      <Navbar />
 
-        {/* Main Content Sections */}
-        <main>
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <LearningPath />
-          <Contact />
-        </main>
+      {/* Main Content Sections */}
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <LearningPath />
+        <Contact />
+      </main>
 
-        {/* Footer */}
-        <Footer />
-
-        {/* Private Owner Photo Manager */}
-        <OwnerPhotoModal />
-      </div>
-    </PhotoProvider>
+      {/* Footer */}
+      <Footer />
+    </div>
   );
 }

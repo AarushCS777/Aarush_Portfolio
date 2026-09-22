@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Github, ArrowUpRight } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { usePhotos } from '../context/PhotoContext';
 
 export const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { heroPhoto } = usePhotos();
+  const heroPhoto = (typeof window !== 'undefined' && localStorage.getItem('aarush_portfolio_hero_photo_v2')) || PERSONAL_INFO.heroImage;
 
   useEffect(() => {
     const handleScroll = () => {
