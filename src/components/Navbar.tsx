@@ -5,7 +5,7 @@ import { PERSONAL_INFO } from '../data/portfolioData';
 export const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const heroPhoto = (typeof window !== 'undefined' && localStorage.getItem('aarush_portfolio_hero_photo_v2')) || PERSONAL_INFO.heroImage;
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,22 +33,7 @@ export const Navbar: React.FC = () => {
       }`}
     >
       <div className="flex items-center gap-3">
-        <a
-          href="#hero"
-          id="nav-photo-link"
-          title={`${PERSONAL_INFO.name} - Back to top`}
-          className="relative p-0.5 rounded-full border border-[#7c6ef7]/50 hover:border-[#7c6ef7] transition-all hover:scale-105"
-        >
-          <img
-            src={heroPhoto}
-            alt={PERSONAL_INFO.name}
-            referrerPolicy="no-referrer"
-            className="w-7 h-7 rounded-full object-cover object-top"
-            onError={(e) => {
-              (e.currentTarget as HTMLImageElement).src = 'https://avatars.githubusercontent.com/u/180328627?v=4';
-            }}
-          />
-        </a>
+       
 
         <a
           href="#hero"
