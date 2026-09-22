@@ -1,9 +1,10 @@
 import React from 'react';
 import { ArrowDown, Github, FolderCode, Mail, Sparkles } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import heroPhoto from '../imggg.jpeg';
 
 export const Hero: React.FC = () => {
-  const heroPhoto = (typeof window !== 'undefined' && localStorage.getItem('aarush_portfolio_hero_photo_v2')) || PERSONAL_INFO.heroImage;
+ 
 
   return (
     <section
