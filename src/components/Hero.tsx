@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowDown, Github, FolderCode, Mail, Sparkles } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import heroPhoto from '../imggg.jpeg';
+import heroPhoto from './imggg.jpeg';
 
 export const Hero: React.FC = () => {
  
