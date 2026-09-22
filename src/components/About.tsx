@@ -1,10 +1,10 @@
 import React from 'react';
 import { Github, ArrowRight, GraduationCap, BrainCircuit } from 'lucide-react';
 import { PERSONAL_INFO, STATS } from '../data/portfolioData';
+import aboutPhoto from '../about.jpeg';
 
 export const About: React.FC = () => {
-  const aboutPhoto = (typeof window !== 'undefined' && localStorage.getItem('aarush_portfolio_about_photo_v2')) || PERSONAL_INFO.aboutImage;
-  const heroPhoto = (typeof window !== 'undefined' && localStorage.getItem('aarush_portfolio_hero_photo_v2')) || PERSONAL_INFO.heroImage;
+
 
   return (
     <section id="about" className="py-24 px-6 sm:px-12 max-w-6xl mx-auto">
